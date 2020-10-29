@@ -21,5 +21,24 @@ public class BankAccount {
     password = p;
   }
 
+  public boolean deposit(double amount) {
+    if (amount > 0) {
+      balance = balance + amount;
+    }
+    else {
+      balance = balance;
+    }
+    return (amount >= 0);
+  }
+
+  public boolean withdraw(double amount) {
+    if(balance < amount || amount < 0) {
+      balance = balance;
+    }
+    else {
+      balance = balance - amount;
+    }
+    return (balance > amount && amount > 0);
+  }
 
 }
