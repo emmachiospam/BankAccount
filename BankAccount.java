@@ -3,22 +3,22 @@ public class BankAccount {
   private int accountID;
   private String password;
 
-  public BankAccount(int a, String p) {
+  public BankAccount(int accountID, String password) {
     balance = 0.0;
-    accountID = a;
-    password = p;
+    accountID = accountID;
+    password = password;
   }
 
-  public String getBalance() {
-    return("balance is " + balance);
+  public double getBalance() {
+    return(balance);
   }
 
-  public String getAccountID() {
-    return("AccountID is " + accountID);
+  public int getAccountID() {
+    return(accountID);
   }
 
-  public void changePassword(String p) {
-    password = p;
+  public void setPassword(String newPass) {
+    password = newPass;
   }
 
   public boolean deposit(double amount) {
