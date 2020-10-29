@@ -4,7 +4,7 @@ public class BankAccount {
   private String password;
 
   public BankAccount(int a, String p) {
-    balance = 0;
+    balance = 0.0;
     accountID = a;
     password = p;
   }
@@ -15,6 +15,10 @@ public class BankAccount {
 
   public String getAccountID() {
     return("AccountID is" + accountID);
+  }
+
+  public void changePassword(String p) {
+    password = p;
   }
 
 
