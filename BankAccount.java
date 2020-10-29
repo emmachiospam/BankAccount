@@ -10,11 +10,11 @@ public class BankAccount {
   }
 
   public String getBalance() {
-    return("balance is" + balance);
+    return("balance is " + balance);
   }
 
   public String getAccountID() {
-    return("AccountID is" + accountID);
+    return("AccountID is " + accountID);
   }
 
   public void changePassword(String p) {
@@ -39,6 +39,10 @@ public class BankAccount {
       balance = balance - amount;
     }
     return (balance > amount && amount > 0);
+  }
+
+  public String toString() {
+    return(accountID + "\t" + balance);
   }
 
 }
